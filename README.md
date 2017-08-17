@@ -6,7 +6,7 @@ For all your histori deletin' needs.
 
 A simple bash script that deletes your browsing histories across the major browsers with one command. Simple, elegant, and efficient. Optional configurations also included.
 
-## How Do I use deleteHistory?
+## How do I use deleteHistory?
 
 1. Clone/download repository.
 2. Open terminal and ``` cd ``` into the cloned/downloaded folder.
