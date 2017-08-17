@@ -1,5 +1,7 @@
 # deleteHistory
 
+For all your histori deletin' needs.
+
 ## What is deleteHistory?
 
 A simple bash script that deletes your browsing histories across the major browsers with one command. Simple, elegant, and efficient. Optional configurations also included.
