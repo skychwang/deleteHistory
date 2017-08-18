@@ -14,3 +14,11 @@ if [[ "$chrome" == true ]]; then
 EOF
 	echo "Google Chrome history deleted."
 fi
+
+if [[ "$safari" == true ]]; then
+	cd ~/Library/Safari
+	rm History.{db,db-lock,db-shm,db-wal}
+	rm WebpageIcons.{db,db-shm,db-wal}
+	rm {TopSites,RecentlyClosedTabs,History}.plist
+	echo "Safari history deleted."
+fi
