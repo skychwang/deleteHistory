@@ -22,3 +22,12 @@ if [[ "$safari" == true ]]; then
 	rm {TopSites,RecentlyClosedTabs,History}.plist
 	echo "Safari history deleted."
 fi
+
+if [[ "$firefox" == true ]]; then
+	cd ~/Library/Application\ Support/Firefox/Profiles/*/.
+	sqlite3 places.sqlite <<EOF
+	delete from moz_historyvisits;
+	vacuum;
+EOF
+	echo "Firefox history deleted."
+fi
