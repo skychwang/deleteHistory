@@ -23,10 +23,19 @@ fi
 
 if [[ "$safari" == true ]]; then
 	cd ~/Library/Safari
-	rm History.{db,db-lock,db-shm,db-wal}
-	rm WebpageIcons.{db,db-shm,db-wal}
-	rm {TopSites,RecentlyClosedTabs,History}.plist
-	echo "Safari history deleted."
+	if [[ "$saf_history" == true ]]; then
+		rm History.{db,db-lock,db-shm,db-wal}
+		rm WebpageIcons.{db,db-shm,db-wal}
+		rm {TopSites,RecentlyClosedTabs,History}.plist
+		echo "Safari history deleted."
+	fi
+	if [[ "$saf_localstorage" == true ]]; then
+		if [[ -d "LocalStorage" ]]; then
+			cd LocalStorage
+			rm -rf *
+			cd ..
+		fi
+	fi
 fi
 
 #Firefox
